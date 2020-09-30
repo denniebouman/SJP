@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: sqs
 jdk:
-- oraclejdk8
+- openjdk11
 script:
 - sonar-scanner
 cache:
