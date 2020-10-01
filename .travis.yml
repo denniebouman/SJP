@@ -7,8 +7,7 @@ addons:
 jdk:
 - openjdk11
 script:
-- mvn clean test  
-- sonar-scanner
+- sonar-scanner -DskipTests=false
 cache:
   directories:
   - "$HOME/.sonar/cache"
