@@ -19,7 +19,7 @@ public class HelloWorldUnitTest {
     @Test
     public void test3() {
         String result = new HelloWorld().getWords(5);
-        assertThat(result, equalTo("five"));
+        assertThat(result, equalTo("four"));
     }
 
 }
