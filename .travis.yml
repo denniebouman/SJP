@@ -2,14 +2,13 @@ dist: trusty
 sudo: required
 addons:
   sonarcloud:
-    organization: sqs
+    organization: "sqs"
+    token:
+      secure: "azCvY31ELCqEa3njBJnGHUFPAZey75g+J1zB8dx4KKjpZQre67ex6BMtPLbZZRPlkIcZ3zCulgKwRgh9mdo8Gc2FE/QiKgxwxVjl48phonDwalEofEt+DVDYcZ3XLnhOA/HFF7eZxQY0FHQblO30+MCS53Fu/z1U0c5uHc6kuJ62T5J8WzuqT13OBaw/yteWGveFocEnAy/hHlX6NmX6dLm/G37wM6kcdWhPbQYHW15YztyAyDiQfXfl27v+rF3gwWXrHxewtUU6z5zDz2jJU5KXLFh5o2HEc9OWEmtzkseh5uslxlqnckQtX34FffUq0E8HZibtSIBFoKzR3dvp1ESgC2JTkTiI2vInJDt31j1YrayQ9mg3gDGpzxzjoKNezNbhSiyUsCwMIwCgR20Qt+xOFbLyzDrKzlBfmEMvOw4+R6laTzIuLIgcX/NhhtkrgQrKxQ2WwQPv0P8dQ/oeBCGXTJb/KI/NKi3/wNCxGNUIRr4QMO7DKvcHfWUx1VyqEesMpOscWYafNLUuH/JhtR0NYLzBmnPuM6qJgiO+vRjMWSMq74EInYA3Iu2RrnaGcH45CAwCTcgYjiPF5VZ31AdDRETQBIXBaUpRwhjwi17o5R9j6/R0aoJ0+n1vKvwnE8slLQg05h+jKY+QUSbb270oZgyTEjXLKiAZkPbLgC0="
 jdk:
 - openjdk11
 script:
-- mvn clean install sonar:sonar -Dsonar.projectKey=SimpleJavaProject
+- mvn clean install sonar:sonar -Dsonar.projectKey=SJP
 cache:
   directories:
   - "$HOME/.sonar/cache"
-env:
-  global:
-    secure: EvRwGaV5DfEbck7vNxhuBMzOnM3rQ6ObXvANTSGPfBPtf3fiD+oLRIpeAzHEwcS97xY1qJae1xa+nacu1oEIpvdeo3FQ5K4ZU1tHWC7tK0ddZDntczrEjUz267WeAivu609bjeUZLRx3qUm5NW4oxo/TbJmuRHqnxHfEGGGSXZBTyZ1b0klsXPh7y2svAWsX3PzNZjADsgh7631yRpDRfriaNyyah4FL19pa+l35maY/Z2RGO8X8QANDxhKA8hJUyzvudvY1yFEsBCgNScuzTgozsbZbO0PdtYTKebk7VKWHa/TqfNel6T4B6A+9zAbiJUwzuNTYzMK60NSNveQNa1CNx/YDOqNa9iI+uFwfW0nGXWEtsgpJ9ehSuqb45AUzWJ8+3A5vJ0pV3oMkENFKw/XD8hWaNddtzO8gQGW9jq0FnADRriJaxXmoBpcOjbc878eF5oZMsXfByzTEgOWzOj86Dk++uWRfUzuwakFFHw26GOEQgVV39WJgAplVZuq1IrWFCMIkMuryE8uJDVGvmo0EY2CeN7Wi3SQJjs7Ax7QgAsAmfJ+C8SmdC2Q4B+slkVW9Ku0RUyVKG5G/BkUNqhQT/k6EsDsO0G6QNEENQqRyeI+isrd7UwIp0OwjFf8FETmPdnqnPCd2AfLQeBk/nVSilWhEVQUuqfepuH2CEhA=
