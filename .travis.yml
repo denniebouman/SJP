@@ -1,5 +1,5 @@
 dist: trusty
-language: java
+# language: java
 sudo: required
 addons:
   sonarcloud:
@@ -7,7 +7,8 @@ addons:
 jdk:
 - openjdk11
 script:
-- sonar-scanner -DskipTests=false
+  - mvn clean verify sonar:sonar -Pcoverage 
+# - sonar-scanner
 cache:
   directories:
   - "$HOME/.sonar/cache"
